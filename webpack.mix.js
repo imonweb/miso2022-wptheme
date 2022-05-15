@@ -24,7 +24,10 @@ mix.js( 'assets/src/scripts/app.js', 'assets/dist/js' )
 		require( 'tailwindcss' ),
 		require( 'postcss-nested' ),
 		require( 'autoprefixer' ),
-	] );
+	] )
+	.options({
+		processCssUrls: false,
+	});
 
 // Add source map and versioning to assets in production environment.
 if ( mix.inProduction() ) {
